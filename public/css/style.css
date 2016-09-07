@@ -1,0 +1,623 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, 
+blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+header, footer, nav, section, article, aside {
+    display: block;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+body {
+	background: #efefef url(../images/background.png) repeat top center; 
+	font-family: Arial, Helvetica, sans-serif; 
+	width: auto;
+	overflow-x: hidden;
+}
+
+header {
+	background-color: #D3D3D3;
+	box-shadow: 0 0 0.33em;
+}
+
+header .name {
+	color: #27408B;
+	font-style: oblique;
+}
+
+header .menu a {
+	font-style: italic;
+}
+
+header .menu a:hover {
+	color: #F4A460;
+	text-decoration: none;
+}
+
+header .dropdown-menu {
+	background-color: #DCDCDC;
+}
+
+footer {
+	background-color: #F4A460;
+}
+
+footer .name {
+	color: #FFFAFA;
+	font-style: oblique;
+}
+
+footer .menu li {
+	float: left;
+	font-style: oblique;
+}
+
+footer .menu a {
+	color: #00688B;
+	text-decoration: none;
+}
+
+footer .menu a:hover {
+	color: #FFFAFA;
+	text-decoration: none;
+}
+
+/*iPhone 4 and iPhone 5*/
+@media screen and (min-width: 300px) and (max-width: 351px) {
+	header .name {
+		font-size: 2.2em;
+	}
+
+	header .menu a {
+		font-size: 1.7em;
+	}
+
+	header .sign {
+		margin-top: 0.3em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.2em;
+		border-radius: 0.2em;
+	}
+
+	footer {
+		background-color: #F4A460;
+		font-style: oblique;
+		text-align: center;
+	}
+
+	footer .name {
+		font-size: 2.2em;
+		margin-bottom: -0.1em;
+		width: 100%;
+	}
+
+	footer .menu li {
+		margin-top: 0em;
+		font-size: 1.7em;
+		width: 100%;
+	}
+}
+
+/*iPhone 6*/
+@media screen and (min-width: 351px) and (max-width: 400px) {
+    header .name {
+		font-size: 2.2em;
+	}
+
+	header .menu a {
+		font-size: 1.7em;
+	}
+
+	header .sign {
+		margin-top: 0.3em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.2em;
+		border-radius: 0.2em;
+	}
+
+	footer {
+		background-color: #F4A460;
+		font-style: oblique;
+		text-align: center;
+	}
+
+	footer .name {
+		font-size: 2.2em;
+		margin-bottom: -0.1em;
+		width: 100%;
+	}
+
+	footer .menu li {
+		margin-top: 0em;
+		font-size: 1.7em;
+		width: 100%;
+	}
+}
+
+/*iPhone 6 Plus*/
+@media screen and (min-width: 401px) and (max-width: 450px) {
+    header .name {
+		font-size: 2.2em;
+	}
+
+	header .menu a {
+		font-size: 1.7em;
+	}
+
+	header .sign {
+		margin-top: 0.3em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.2em;
+		border-radius: 0.2em;
+	}
+
+	footer {
+		background-color: #F4A460;
+		font-style: oblique;
+		text-align: center;
+	}
+
+	footer .name {
+		font-size: 2.2em;
+		margin-bottom: -0.1em;
+		width: 100%;
+	}
+
+	footer .menu li {
+		margin-top: 0em;
+		font-size: 1.7em;
+		width: 100%;
+	}
+}
+
+/*Nexus 7*/
+@media screen and (min-width: 600px) and (max-width: 650px) {
+    header .name {
+		font-size: 2.2em;
+	}
+
+	header .menu a {
+		font-size: 1.7em;
+	}
+
+	header .sign {
+		margin-top: 0.3em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.2em;
+		border-radius: 0.2em;
+	}
+
+	footer {
+		background-color: #F4A460;
+		font-style: oblique;
+		text-align: center;
+	}
+
+	footer .name {
+		font-size: 2.2em;
+		margin-bottom: -0.1em;
+		width: 100%;
+	}
+
+	footer .menu li {
+		margin-top: 0em;
+		font-size: 1.7em;
+		width: 100%;
+	}
+}
+
+/*iPad and ipad Mini*/
+@media screen and (min-width: 751px) and (max-width: 800px) {
+    header .name {
+		font-size: 2.5em;
+	}
+
+	header .menu a {
+		font-size: 1.85em;
+	}
+
+	header .sign {
+		margin-top: 0.4em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.25em;
+		border-radius: 0.25em;
+	}
+
+	footer {
+		margin-top: 0.9em;
+	}
+
+	footer .name {
+		font-size: 2.5em;
+	}
+
+	footer .menu li {
+		font-size: 1.85em;
+		padding-left: 0.75em;
+		margin-top: 0.35em;
+	}
+}
+
+/*Nexus 10*/
+@media screen and (min-width: 801px) and (max-width: 850px) {
+    header .name {
+		font-size: 2.5em;
+	}
+
+	header .menu a {
+		font-size: 1.85em;
+	}
+
+	header .sign {
+		margin-top: 0.4em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.25em;
+		border-radius: 0.25em;
+	}
+
+	footer {
+		margin-top: 0.9em;
+	}
+
+	footer .name {
+		font-size: 2.5em;
+	}
+
+	footer .menu li {
+		font-size: 1.85em;
+		padding-left: 0.75em;
+		margin-top: 0.35em;
+	}
+}  
+
+/*iPhone 4 landscape*/
+@media screen and (min-width: 451px) and (max-width: 550px) {
+   header .name {
+		font-size: 2.5em;
+	}
+
+	header .menu a {
+		font-size: 1.85em;
+	}
+
+	header .sign {
+		margin-top: 0.4em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.25em;
+		border-radius: 0.25em;
+	}
+
+	footer {
+		margin-top: 0.9em;
+	}
+
+	footer .name {
+		font-size: 2.5em;
+	}
+
+	footer .menu li {
+		font-size: 1.85em;
+		padding-left: 0.75em;
+		margin-top: 0.35em;
+	}
+}
+
+/*iPhone 5 landscape*/
+@media screen and (min-width: 551px) and (max-width: 650px) {
+   header .name {
+		font-size: 2.5em;
+	}
+
+	header .menu a {
+		font-size: 1.85em;
+	}
+
+	header .sign {
+		margin-top: 0.4em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.25em;
+		border-radius: 0.25em;
+	}
+
+	footer {
+		margin-top: 0.9em;
+	}
+
+	footer .name {
+		font-size: 2.5em;
+	}
+
+	footer .menu li {
+		font-size: 1.85em;
+		padding-left: 0.75em;
+		margin-top: 0.35em;
+	}
+}
+
+/*iPhone 6 landscape*/
+@media screen and (min-width: 651px) and (max-width: 700px) {
+    header .name {
+		font-size: 2.5em;
+	}
+
+	header .menu a {
+		font-size: 1.85em;
+	}
+
+	header .sign {
+		margin-top: 0.4em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.25em;
+		border-radius: 0.25em;
+	}
+
+	footer {
+		margin-top: 0.9em;
+	}
+
+	footer .name {
+		font-size: 2.5em;
+	}
+
+	footer .menu li {
+		font-size: 1.85em;
+		padding-left: 0.75em;
+		margin-top: 0.35em;
+	}
+}
+
+/*iPhone 6 Plus landscape*/
+@media screen and (min-width: 701px) and (max-width: 850px) {
+    header .name {
+		font-size: 2.5em;
+	}
+
+	header .menu a {
+		font-size: 1.85em;
+	}
+
+	header .sign {
+		margin-top: 0.4em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.25em;
+		border-radius: 0.25em;
+	}
+
+	footer {
+		margin-top: 0.9em;
+	}
+
+	footer .name {
+		font-size: 2.5em;
+	}
+
+	footer .menu li {
+		font-size: 1.85em;
+		padding-left: 0.75em;
+		margin-top: 0.35em;
+	}
+}
+
+/*Nexus 7 landscape*/
+@media screen and (min-width: 851px) and (max-width: 1000px) {
+    header .name {
+		font-size: 2.5em;
+	}
+
+	header .menu a {
+		font-size: 1.85em;
+	}
+
+	header .sign {
+		margin-top: 0.4em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.25em;
+		border-radius: 0.25em;
+	}
+
+	footer {
+		margin-top: 0.9em;
+	}
+
+	footer .name {
+		font-size: 2.5em;
+	}
+
+	footer .menu li {
+		font-size: 1.85em;
+		padding-left: 0.75em;
+		margin-top: 0.35em;
+	}
+}
+
+/*iPad and ipad Mini landscape*/
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+   header .name {
+		font-size: 2.5em;
+	}
+
+	header .menu a {
+		font-size: 1.85em;
+	}
+
+	header .sign {
+		margin-top: 0.4em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.25em;
+		border-radius: 0.25em;
+	}
+
+	footer {
+		margin-top: 0.9em;
+	}
+
+	footer .name {
+		font-size: 2.5em;
+	}
+
+	footer .menu li {
+		font-size: 1.85em;
+		padding-left: 0.75em;
+		margin-top: 0.35em;
+	}
+}
+
+/*Nexus 10 landscape*/
+@media screen and (min-width: 1201px) and (max-width: 1350px) {
+    header .name {
+		font-size: 2.5em;
+	}
+
+	header .menu a {
+		font-size: 1.85em;
+	}
+
+	header .sign {
+		margin-top: 0.4em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.25em;
+		border-radius: 0.25em;
+	}
+
+	footer {
+		margin-top: 0.9em;
+	}
+
+	footer .name {
+		font-size: 2.5em;
+	}
+
+	footer .menu li {
+		font-size: 1.85em;
+		padding-left: 0.75em;
+		margin-top: 0.35em;
+	}
+}
+
+/* Notebook */
+@media screen and (min-width: 1351px) and (max-width: 2000px) {
+    header .name {
+		font-size: 2.5em;
+	}
+
+	header .menu a {
+		font-size: 1.85em;
+	}
+
+	header .sign {
+		margin-top: 0.4em;
+		margin-right: 4em;
+	}
+
+	header .sign a {
+		font-size: 1.25em;
+		border-radius: 0.25em;
+	}
+
+	footer {
+		margin-top: 0.9em;
+	}
+
+	footer .name {
+		font-size: 2.5em;
+	}
+
+	footer .menu li {
+		font-size: 1.85em;
+		padding-left: 0.75em;
+		margin-top: 0.34em;
+	}
+}
+

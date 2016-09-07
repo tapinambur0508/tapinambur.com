@@ -1,0 +1,1328 @@
+a:hover {
+    text-decoration: none;
+}
+
+i {
+    cursor: pointer;
+}
+
+#myCarousel img {
+    width: 100%;
+}
+
+ #myCarousel a {  
+    color: #FFFAFA;
+    text-align: center;
+}
+
+ #myCarousel a:hover {
+    color: #FF4F00;
+}
+
+#myContainer .cols {
+    float: left;
+    padding: 0 1em;
+}
+
+#myContainer h1 {
+    color: #104E8B;
+}
+
+#myContainer h2 {
+    color: #FF7F00;
+    text-align: center;
+}
+
+#myContainer img {
+    float: left;
+    width: 100%;
+    margin: 0.5em auto;
+    border-radius: 0.15em;
+    -moz-border-radius: 0.15em;
+    -webkit-border-radius: 0.15em;
+}
+
+#myContainer .btn {
+    width: 100%;
+    margin-top: 0.5em;
+}
+
+#up {
+    position: fixed;
+    padding: 15px 10px 10px;
+    right: 10px;
+    bottom: 10px;
+    display: none;
+    color: #008B00;
+    cursor: pointer;
+}
+
+/*iPhone 4 and iPhone 5*/
+@media screen and (min-width: 300px) and (max-width: 351px) {
+    #myCarousel {
+        margin-top: 3.7em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.5em;
+        height: 0.5em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 13em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 1.6em;
+    }
+
+    #myContainer {
+        width: 95%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.2em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11,
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 1.8em;
+    }
+
+    #myContainer h2 {
+        font-size: 1.7em;
+    }
+    
+    #myContainer p {
+        font-size: 1.3em;
+    }
+
+    #myContainer .btn {
+        font-size: 1em;
+    }
+}
+
+/*iPhone 6*/
+@media screen and (min-width: 351px) and (max-width: 400px) {
+    #myCarousel {
+         margin-top: 4.7em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.5em;
+        height: 0.5em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 15em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 1.7em;
+    }
+
+    #myContainer {
+        width: 95%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.2em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11,
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #myContainer h2 {
+        font-size: 1.9em;
+    }
+    
+    #myContainer p {
+        font-size: 1.5em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.1em;
+    }
+}
+
+/*iPhone 6 Plus*/
+@media screen and (min-width: 401px) and (max-width: 450px) {
+    #myCarousel {
+        margin-top: 4.7em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.6em;
+        height: 0.6em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 17em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 1.8em;
+    }
+
+    #myContainer {
+        width: 95%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.2em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11,
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 2.2em;
+        text-align: center;
+    }
+
+    #myContainer h2 {
+        font-size: 2.1em;
+    }
+    
+    #myContainer p {
+        font-size: 1.7em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.1em;
+    }
+}
+
+/*Nexus 7*/
+@media screen and (min-width: 600px) and (max-width: 650px) {
+    #myCarousel {
+        margin-top: 4.8em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.6em;
+        height: 0.6em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 21em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 2.1em;
+    }
+
+    #myContainer {
+        width: 96%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.2em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11,
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    #myContainer h2 {
+        font-size: 2.4em;
+    }
+    
+    #myContainer p {
+        font-size: 2em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.3em;
+    }
+}
+
+/*iPad and ipad Mini*/
+@media screen and (min-width: 751px) and (max-width: 800px) {
+    #myCarousel  {
+        margin-top: 3.65em;
+        margin-bottom: 1.15em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.6em;
+        height: 0.6em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 28em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 2.4em;
+    }
+
+    #myCarousel p {
+        font-size: 2.4em;
+    }
+
+    #myContainer {
+        width: 96%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.45em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11,
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 3em;
+    }
+
+    #myContainer h2 {
+        font-size: 2.9em;
+    }
+    
+    #myContainer p {
+        font-size: 2.5em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.4em;
+    }
+}
+
+/*Nexus 10*/
+@media screen and (min-width: 801px) and (max-width: 850px) {
+    #myCarousel  {
+        margin-top: 3.65em;
+        margin-bottom: 1.15em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.7em;
+        height: 0.7em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 29em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 2.5em;
+    }
+
+    #myCarousel p {
+        font-size: 2.5em;
+    }
+
+    #myContainer {
+        width: 97%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.5em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11,
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 3.1em;
+    }
+
+    #myContainer h2 {
+        font-size: 3em;
+    }
+    
+    #myContainer p {
+        font-size: 2.6em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.25em;
+    }
+}  
+
+/*iPhone 4 landscape*/
+@media screen and (min-width: 451px) and (max-width: 550px) {
+    #myCarousel  {
+        margin-top: 4.7em;
+        margin-bottom: 1.15em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.6em;
+        height: 0.6em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 16em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 2em;
+    }
+
+    #myCarousel p {
+        font-size: 2em;
+    }
+
+    #myContainer {
+        width: 95%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.2em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11,
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #myContainer h2 {
+        font-size: 1.9em;
+    }
+    
+    #myContainer p {
+        font-size: 1.5em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.15em;
+    }
+}
+
+/*iPhone 5 landscape*/
+@media screen and (min-width: 551px) and (max-width: 650px) {
+    #myCarousel  {
+        margin-top: 4.7em;
+        margin-bottom: 1.15em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.6em;
+        height: 0.6em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 18em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 2.1em;
+    }
+
+    #myCarousel p {
+        font-size: 2.1em;
+    }
+
+    #myContainer {
+        width: 97%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.2em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11,
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 2.2em;
+        text-align: center;
+    }
+
+    #myContainer h2 {
+        font-size: 2.1em;
+    }
+    
+    #myContainer p {
+        font-size: 1.7em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.15em;
+    }
+}
+
+/*iPhone 6 landscape*/
+@media screen and (min-width: 651px) and (max-width: 700px) {
+    #myCarousel  {
+        margin-top: 4.7em;
+        margin-bottom: 1.15em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.6em;
+        height: 0.6em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 22em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 2.1em;
+    }
+
+    #myCarousel p {
+        font-size: 2.1em;
+    }
+
+    #myContainer {
+        width: 97%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.2em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11,
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 2.3em;
+        text-align: center;
+    }
+
+    #myContainer h2 {
+        font-size: 2.2em;
+    }
+    
+    #myContainer p {
+        font-size: 1.8em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.2em;
+    }
+}
+
+/*iPhone 6 Plus landscape*/
+@media screen and (min-width: 701px) and (max-width: 850px) {
+    #myCarousel  {
+        margin-top: 4.7em;
+        margin-bottom: 1.15em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.8em;
+        height: 0.8em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 24em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 2.4em;
+    }
+
+    #myCarousel p {
+        font-size: 2.4em;
+    }
+
+    #myContainer {
+        width: 97%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.2em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11,
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    #myContainer h2 {
+        font-size: 2.4em;
+    }
+    
+    #myContainer p {
+        font-size: 2em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.2em;
+    }
+}
+
+/*Nexus 7 landscape*/
+@media screen and (min-width: 851px) and (max-width: 1000px) {
+    #myCarousel  {
+        margin-top: 3.65em;
+        margin-bottom: 1.15em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.7em;
+        height: 0.7em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 25em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 2.5em;
+    }
+
+    #myCarousel p {
+        font-size: 2.5em;
+    }
+
+    #myContainer {
+        width: 97%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.5em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11 { width: 50% }
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 2.6em;
+    }
+
+    #myContainer h2 {
+        font-size: 2.5em;
+    }
+    
+    #myContainer p {
+        font-size: 2em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.2em;
+    }
+}
+
+/*iPad and ipad Mini landscape*/
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+    #myCarousel  {
+        margin-top: 3.65em;
+        margin-bottom: 1.15em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 0.8em;
+        height: 0.8em;
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel img {
+        height: 27em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -1.2em;
+    }
+
+    #myCarousel a {
+        font-size: 2.5em;
+    }
+
+    #myCarousel p {
+        font-size: 2.5em;
+    }
+
+    #myContainer {
+        width: 97%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.5em;
+    }
+
+    #myContainer .cols {
+        text-align: left;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .cols.col-1,
+    #myContainer .cols.col-2,
+    #myContainer .cols.col-3,
+    #myContainer .cols.col-4,
+    #myContainer .cols.col-5,
+    #myContainer .cols.col-6,
+    #myContainer .cols.col-7,
+    #myContainer .cols.col-8,
+    #myContainer .cols.col-9,
+    #myContainer .cols.col-10,
+    #myContainer .cols.col-11 { width: 50% }
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 2.6em;
+    }
+
+    #myContainer h2 {
+        font-size: 2.5em;
+    }
+    
+    #myContainer p {
+        font-size: 2em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.2em;
+    }
+}
+
+/*Nexus 10 landscape*/
+@media screen and (min-width: 1201px) and (max-width: 1350px) {
+    #myCarousel  {
+        margin-top: 3.65em;
+        margin-bottom: 1.15em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 1em;
+        height: 1em;
+        margin-bottom: -1.1em;
+    }
+
+    #myCarousel img {
+        height: 35em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -0.8em;
+    }
+
+    #myCarousel a {
+        font-size: 2.9em;
+    }
+
+    #myCarousel p {
+        font-size: 2.9em;
+    }
+
+    #myContainer {
+        width: 98%;
+        margin: 0 auto 0.5em auto;
+    }
+
+    #myContainer .row {
+        margin-bottom: 1.5em;
+    }
+
+    #myContainer .cols {
+        text-align: justify;
+        background-color: #FFFFFA; 
+    }
+
+    #myContainer .cols.col-1 { width: 8.333%; }
+    #myContainer .cols.col-2 { width: 16.666%; }
+    #myContainer .cols.col-3 { width: 25%; }
+    #myContainer .cols.col-4 { width: 33.333%; }
+    #myContainer .cols.col-5 { width: 41.666%; }
+    #myContainer .cols.col-6 { width: 50%; }
+    #myContainer .cols.col-7 { width: 58.333%; }
+    #myContainer .cols.col-8 { width: 66.666%; }
+    #myContainer .cols.col-9 { width: 75%; }
+    #myContainer .cols.col-10 { width: 83.333%; }
+    #myContainer .cols.col-11 { width: 91.666%; }
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 2.5em;
+    }
+
+    #myContainer h2 {
+        font-size: 2.4em;
+    }
+    
+    #myContainer p {
+        font-size: 1.9em;
+    }
+
+    #myContainer .btn {
+        font-size: 1.2em;
+    }
+}
+
+/* Notebook */
+@media screen and (min-width: 1351px) and (max-width: 2000px) {
+    #myCarousel  {
+        margin-top: 3.68em;
+        margin-bottom: 1.15em;
+    }
+
+    #myCarousel .carousel-indicators li {
+        width: 1em;
+        height: 1em;
+        margin-bottom: -1.1em;
+    }
+
+    #myCarousel img {
+        height: 42em;
+    }
+
+    #myCarousel .carousel-caption p {
+        margin-bottom: -0.8em;
+    }
+
+    #myCarousel a {
+        font-size: 2.9em;
+    }
+
+    #myCarousel p {
+        font-size: 2.9em;
+    }
+
+    #myContainer {
+        width: 95%;
+        margin: 0 auto 0.5em auto;
+        border-radius: 0.5em;
+        -moz-border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        background-color: #FFFFFA;  
+    }
+
+    #myContainer .row {
+        padding: 1em 1em;
+    }
+
+    #myContainer .cols {
+        text-align: justify;
+    }
+
+    #myContainer .cols.col-1 { width: 8.333%; }
+    #myContainer .cols.col-2 { width: 16.666%; }
+    #myContainer .cols.col-3 { width: 25%; }
+    #myContainer .cols.col-4 { width: 33.333%; }
+    #myContainer .cols.col-5 { width: 41.666%; }
+    #myContainer .cols.col-6 { width: 50%; }
+    #myContainer .cols.col-7 { width: 58.333%; }
+    #myContainer .cols.col-8 { width: 66.666%; }
+    #myContainer .cols.col-9 { width: 75%; }
+    #myContainer .cols.col-10 { width: 83.333%; }
+    #myContainer .cols.col-11 { width: 91.666%; }
+    #myContainer .cols.col-12 { width: 100%; }
+
+    #myContainer .cols.col-12 { margin-top: -0.5em; margin-bottom: -0.2em; }
+
+    #myContainer .cols.col-4 img { 
+        height: 21em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer .cols.col-9 img { 
+        height: 25em;
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+
+    #myContainer h1 {
+        font-size: 2.6em;
+    }
+
+    #myContainer h2 {
+        font-size: 2.4em;
+        text-align: center;
+    }
+    
+    #myContainer p {
+        font-size: 1.6em;
+    }
+
+    #myContainer input {
+        font-size: 2em;
+    }
+
+    #myContainer textarea {
+        font-size: 1.6em;
+    }
+
+    #myContainer .comments {
+        width: 97%;
+        margin: 0 auto;
+    }
+
+    #myContainer .comments .cols {
+        margin-top: 1.5em;
+        border: 0.1em solid #778899;  
+        border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        -webkit-border-radius: 0.2em;
+    }
+}
+
+.clear: after,
+.clear: before,
+.row: after,
+.row: before,
+#myContainer: after,
+#myContainer: before, {
+    content: " ";
+    display: table;
+}
+
+.clear: after,
+#myContainer: after,
+#myContainer: before, {
+    clear: both;
+}

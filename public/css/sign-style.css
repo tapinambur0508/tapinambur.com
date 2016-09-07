@@ -1,0 +1,92 @@
+a:hover {
+    text-decoration: none;
+}
+
+/*iPhone 4 and iPhone 5*/
+@media screen and (min-width: 300px) and (max-width: 351px) {
+
+}
+
+/*iPhone 6*/
+@media screen and (min-width: 351px) and (max-width: 400px) {
+
+}
+
+/*iPhone 6 Plus*/
+@media screen and (min-width: 401px) and (max-width: 450px) {
+    
+}
+
+/*Nexus 7*/
+@media screen and (min-width: 600px) and (max-width: 650px) {
+  
+}
+
+/*iPad and ipad Mini*/
+@media screen and (min-width: 751px) and (max-width: 800px) {
+
+}
+
+/*Nexus 10*/
+@media screen and (min-width: 801px) and (max-width: 850px) {
+  
+}  
+
+/*iPhone 4 landscape*/
+@media screen and (min-width: 451px) and (max-width: 550px) {
+ 
+}
+
+/*iPhone 5 landscape*/
+@media screen and (min-width: 551px) and (max-width: 650px) {
+
+}
+
+/*iPhone 6 landscape*/
+@media screen and (min-width: 651px) and (max-width: 700px) {
+
+}
+
+/*iPhone 6 Plus landscape*/
+@media screen and (min-width: 701px) and (max-width: 850px) {
+
+}
+
+/*Nexus 7 landscape*/
+@media screen and (min-width: 851px) and (max-width: 1000px) {
+
+}
+
+/*iPad and ipad Mini landscape*/
+@media screen and (min-width: 1001px) and (max-width: 1200px) {
+ 
+}
+
+/*Nexus 10 landscape*/
+@media screen and (min-width: 1201px) and (max-width: 1350px) {
+ 
+}
+
+/* Notebook */
+@media screen and (min-width: 1351px) and (max-width: 2000px) {
+	#form {
+		width: 50%;
+		margin: 0 auto;
+		margin-top: 10em;
+	}
+
+	#form input, #form a {
+		font-size: 1.5em;
+		margin-bottom: 0.3em;
+	}
+}
+
+.clear: after,
+.clear: before, {
+    content: " ";
+    display: table;
+}
+
+.clear: after, {
+    clear: both;
+}
