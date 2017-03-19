@@ -1,0 +1,20 @@
+RewriteEngine on
+
+ErrorDocument 404 /404.php
+
+RewriteRule ^404/?$ 404.php
+RewriteRule ^news/?$ news.php
+RewriteRule ^version/?$ version.php
+RewriteRule ^advertising/?$ advertising.php
+RewriteRule ^cooperation/?$ cooperation.php
+RewriteRule ^about-us/?$ about-us.php
+RewriteRule ^article/([a-zA-Z0-9\W]+)/([0-9]+)/?$ article.php?header=$1&id=$2
+RewriteRule ^([a-zA-Z\s]+)/?$ news.php?href=$1
+
+<IfModule mod_headers.c>
+    Header append Cache-Control "no-store, no-cache, must-revalidate"
+</IfModule>
+ 
+<IfModule mod_expires.c>
+    ExpiresActive On ExpiresDefault "now"
+</IfModule>

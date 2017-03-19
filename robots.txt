@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /404.php
+
+Sitemap: http://www.tapinambur.com/sitemap.xml

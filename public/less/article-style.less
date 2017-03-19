@@ -1,0 +1,75 @@
+@import "home-style.less";
+#myCarousel {
+.carousel-caption {
+a:hover {
+color: #FFFAFA;
+}
+}
+}
+#myContainer {
+ul {
+list-style: circle;
+}
+.direction {
+display: block;
+margin: 5px 0 0;
+word-break: normal;
+text-align: center;
+}
+.full-content {
+transition: background-color 0.5s ease;
+}
+.fix-full-content {
+span {
+color: #104E8B;
+cursor: pointer;
+font-weight: bold;
+&:hover {
+color: #FF4F00;
+text-decoration: underline;
+}
+}
+button[name="save"], button[name="cancel"] {
+display: none;
+margin: 10px auto;
+}
+}
+#disqus_thread {
+width: 95%;
+margin: 0 auto;
+}
+}
+/* Extra small devices (phones, less than 768px) */
+@media screen and (max-width: 767.9px) {
+#myContainer {
+.direction {
+font-size: 20px;
+}
+}
+}
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) and (max-width: 991.9px) {
+#myContainer {
+.direction {
+font-size: 22px;
+}
+}
+}
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) and (max-width: 1199.9px) {
+#myContainer {
+width: 70%;
+.direction {
+font-size: 24px;
+}
+}
+}
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+#myContainer {
+width: 65%;
+.direction {
+font-size: 26px;
+}
+}
+}
