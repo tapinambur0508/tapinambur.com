@@ -1,6 +1,6 @@
 <footer>
 <div class=container>
-<a class=navbar-brand href=/version>tapinambur 1.1</a>
+<a class=navbar-brand href=/version>tapinambur 1.2</a>
 <ul class="nav navbar-nav">
 <li><a target="_blank" href="http://www.api.tapinambur.com">API</a></li>
 <li><a href="/advertising">Реклама</a></li>
