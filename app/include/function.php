@@ -1,8 +1,6 @@
 <?php
-    $tapinambur = new tapinambur();
-
     class tapinambur {
-        protected $mysqli = false;
+        var $mysqli = false;
 
         function __construct() {
             $this->connectDB();
@@ -18,7 +16,13 @@
         }
 
         function getNews($pos, $count) {
-            return $this->resultToArray($this->mysqli->query("SELECT `id`, `header`, `content`, `cover_image`, `views`, `date` FROM `news` WHERE `publish` = 1 ORDER BY `publish_date_time` DESC LIMIT {$pos}, {$count}"));
+            $result = $this->mysqli->query("SELECT `id`, `header`, `content`, `cover_image`, `views`, DATE_FORMAT(`date_time` , '%d.%m.%Y') AS `date` 
+                                            FROM `news` 
+                                            WHERE `publish` = 1 
+                                            ORDER BY `date_time` DESC 
+                                            LIMIT {$pos}, {$count}");
+
+            return $this->resultToArray($result);
         }
 
         function getCountNews() {
@@ -26,12 +30,23 @@
         }
 
         function getMostVisitNews($poss, $count) {
-            return $this->resultToArray($this->mysqli->query("SELECT `id`, `header`, `content`, `cover_image`, `views`, `date` FROM `news` WHERE `publish` = 1 ORDER BY `views` DESC LIMIT {$poss}, {$count}"));
+            $result = $this->mysqli->query("SELECT `id`, `header`, `content`, `cover_image`, `views`, DATE_FORMAT(`date_time` , '%d.%m.%Y') AS `date` 
+                                            FROM `news` 
+                                            WHERE `publish` = 1 
+                                            ORDER BY `views` DESC 
+                                            LIMIT {$poss}, {$count}");
+
+            return $this->resultToArray($result);
         }
 
         function getPublication($href, $poss, $count) {
-            return $this->resultToArray($this->mysqli->query("SELECT `id`, `header`, `content`, `cover_image`, `views`, `date` FROM `news` WHERE `key_word` LIKE '$href' AND `publish` = 1 ORDER BY `publish_date_time` DESC 
-                LIMIT {$poss}, {$count}"));
+            $result = $this->mysqli->query("SELECT `id`, `header`, `content`, `cover_image`, `views`, DATE_FORMAT(`date_time` , '%d.%m.%Y') AS `date` 
+                                            FROM `news` 
+                                            WHERE `key_word` LIKE '$href' AND `publish` = 1 
+                                            ORDER BY `date_time` DESC 
+                                            LIMIT {$poss}, {$count}");
+
+             return $this->resultToArray($result);
         }
 
         function getCountPublication($href) {
@@ -43,44 +58,48 @@
         }
 
         function getArticle($id) {
-            $result = $this->mysqli->query("SELECT `id`, `header`, `full_content`, `cover_image`, `views`, `date`, `key_word`, `source`, `publish_date_time` FROM `news` WHERE `id` = $id AND `publish` = 1");
+            $result = $this->mysqli->query("SELECT `id`, `header`, `full_content`, `cover_image`, `views`, `date_time`, `key_word`, `source`
+                                            FROM `news` 
+                                            WHERE `id` = $id AND `publish` = 1");
 
             return $result->fetch_assoc();
         }
 
-        function setVisits($article_id, $value, $ip, $date, $browser) {
-            $result = $this->mysqli->query("SELECT * FROM `visits` WHERE `article_id` = '$article_id' AND `ip` = '$ip' AND `date` = '$date'");
+        function setVisits($article_id, $value, $ip, $browser) {
+            $result = $this->mysqli->query("SELECT `id` FROM `visits` WHERE `article_id` = '$article_id' AND `ip` = '$ip' AND `date` = CURDATE()");
 
             if (mysqli_num_rows($result) == 0) {
                 ++$value;
-                $this->mysqli->query("INSERT INTO `visits` SET `article_id` = '$article_id', `ip` = '$ip', `date` = '$date', `browser` = '$browser'");
-                $this->mysqli->query("UPDATE `news` SET `views` = '$value' WHERE `id` = '$article_id'");
+                $this->mysqli->query("INSERT INTO `visits` SET `article_id` = $article_id, `ip` = '$ip', `date` = CURDATE(), `browser` = '$browser'");
+                $this->mysqli->query("UPDATE `news` SET `views` = $value WHERE `id` = $article_id");
             }
 
             return $value;
         }
 
         function needToUpdateArticle($article_id, $full_content) {
-            $this->mysqli->query("INSERT INTO `need_to_update_articles` SET `full_content` = '$full_content', `article_id` = '$article_id'");
-            $id = mysqli_insert_id($this->mysqli);
+            $this->mysqli->query("INSERT INTO `need_to_update_articles` SET `full_content` = '$full_content', `article_id` = $article_id");
 
-            return $id;
+            return mysqli_insert_id($this->mysqli);
         }
 
-        function getPrevNews($publish_date_time) {
-            return mysqli_fetch_row($this->mysqli->query("SELECT `id`, `header` FROM `news` WHERE `publish_date_time` < '$publish_date_time' AND `publish` = 1 
-                ORDER BY `publish_date_time` DESC"));
+        function getPrevNews($date_time) {
+            return mysqli_fetch_row($this->mysqli->query("SELECT `id`, `header` FROM `news` WHERE `date_time` < '$date_time' AND `publish` = 1 ORDER BY `date_time` DESC"));
         }
 
-        function getNextNews($publish_date_time) {
-            return mysqli_fetch_row($this->mysqli->query("SELECT `id`, `header` FROM `news` WHERE `publish_date_time` > '$publish_date_time' AND `publish` = 1"));
+        function getNextNews($date_time) {
+            return mysqli_fetch_row($this->mysqli->query("SELECT `id`, `header` FROM `news` WHERE `date_time` > '$date_time' AND `publish` = 1"));
         }
 
-        function getReadMoreNews($id, $key_word) {
-            $result = $this->mysqli->query("SELECT `id`, `header`, `content`, `cover_image`, `views`, `date` FROM `news` WHERE `key_word` = '$key_word' AND `id` != '$id' AND `publish` = 1 ORDER BY RAND() LIMIT 6");
+        function getRandNews($id, $count) {
+            $result = $this->mysqli->query("SELECT `id`, `header`, `content`, `cover_image`, `views`, DATE_FORMAT(`date_time` , '%d.%m.%Y') AS `date` 
+                                            FROM `news` 
+                                            WHERE `publish` = 1 AND `id` != $id AND DATE_ADD(DATE(`date_time`), Interval 10 DAY) >= CURDATE()
+                                            ORDER BY RAND() 
+                                            LIMIT $count");
 
             if (mysqli_num_rows($result) == 0) {
-                $result = $this->mysqli->query("SELECT `id`, `header`, `content`, `cover_image`, `views`, `date` FROM `news` WHERE `id` != '$id' AND `publish` = 1 ORDER BY RAND() LIMIT 6");
+                return $this->getMostVisitNews(0, $count);
             }
 
             return $this->resultToArray($result);

@@ -1,26 +1,27 @@
+@import "style.less";
 #myCarousel {
 img {
 width: 100%;
-min-height: 45vh;
+min-height: 43vh;
 max-height: 80vh;
 }
 .carousel-caption {
-left: 6%;
-right: 6%;
+left: 4%;
+right: 4%;
 a {
 color: #fff;
 text-align: center;
-text-shadow: 2px 2px 4px #000000;
+text-shadow: 2px 2px 4px #000;
 &:hover {
 color: #FF4F00;
 }
 }
 }
 .date, .views {
-text-shadow: 2px 2px 4px #000000;
+text-shadow: 2px 2px 4px #000;
 position: absolute;
 color: #fff;
-bottom: 0;
+bottom: -5px;
 }
 .views {
 left: 18px;
@@ -30,7 +31,7 @@ right: 18px;
 }
 .carousel-control {
 width: 10%;
-text-shadow: 2px 2px 4px #000000;
+text-shadow: 2px 2px 4px #000;
 }
 }
 #myContainer {
@@ -63,10 +64,10 @@ opacity: 0.6;
 }
 }
 .date, .views {
-text-shadow: 2px 2px 4px #000000;
+text-shadow: 2px 2px 4px #000;
 position: absolute;
 color: #fff;
-bottom: 0;
+bottom: -5px;
 }
 .date {
 right: 10px;
@@ -90,6 +91,9 @@ position: fixed;
 #myCarousel {
 .carousel-caption a {
 font-size: 24px;
+}
+.carousel-control {
+display: none;
 }
 .date, .views {
 font-size: 18px;
@@ -120,7 +124,7 @@ font-size: 20px;
 }
 }
 #myContainer {
-width: 88%;
+width: 85%;
 margin: 65px auto 20px;
 border-radius: 5px;
 }
@@ -144,7 +148,7 @@ margin: 65px auto 20px;
 border-radius: 5px;
 }
 #up {
-font-size: 4em;
+font-size: 3.5em;
 }
 }
 /* Large devices (large desktops, 1200px and up) */
@@ -158,11 +162,11 @@ font-size: 24px;
 }
 }
 #myContainer {
-width: 92%;
+width: 90%;
 margin: 65px auto 20px;
 border-radius: 5px;
 }
 #up {
-font-size: 5em;
+font-size: 4em;
 }
 }

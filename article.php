@@ -1,9 +1,11 @@
-<?php include($_SERVER['DOCUMENT_ROOT'].'/app/include/function.php'); $article=$tapinambur->getArticle($_GET["id"]);
-if (!$article) {
-exit(header("Location: /404"));
-}
+<?php 
+include_once($_SERVER['DOCUMENT_ROOT'].'/app/include/function.php'); 
+$tapinambur = new tapinambur(); 
+$article=$tapinambur->getArticle($_GET["id"]);
+if (!$article) { exit(header("Location: /404")); }
 $title = $article["header"].' | tapinambur';
-$style = 'article-style';
+$style_less = 'article-style.less';
+$style_masonry = 'masonry-small.css';
 $meta = '
 <meta property="og:title" content="'.$title.'" />
 <meta property="og:type" content="article" />
@@ -11,6 +13,8 @@ $meta = '
 <meta property="og:image" content="'.$article["cover_image"].'"/>
 <meta property="og:url" content="'.$_SERVER["HTTP_HOST"].''.$_SERVER["REQUEST_URI"].'"/>
 <meta property="og:site_name" content="tapinambur"/>
+<meta property="fb:app_id" content="1276593922383445"/>
+<meta property="fb:admins" content="100002982444589"/>
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:url" content="'.$_SERVER["HTTP_HOST"].''.$_SERVER["REQUEST_URI"].'"/>
 <meta property="og:title" content="'.$title.'" />
@@ -20,32 +24,23 @@ $meta = '
 <meta itemprop="image" content="'.$article["cover_image"].'"/>';
 include_once($_SERVER['DOCUMENT_ROOT'].'/app/header.php');
 $ip = $_SERVER["REMOTE_ADDR"];
-$date = date("Y-m-d");
 $browser = $_SERVER['HTTP_USER_AGENT'];
-$article["views"] = $tapinambur->setVisits($_GET["id"], $article["views"], $ip, $date, $browser);
-$news = $tapinambur->getReadMoreNews($article["id"], $article["key_word"]);
+$article["views"] = $tapinambur->setVisits($_GET["id"], $article["views"], $ip, $browser);
+$news = $tapinambur->getRandNews($article["id"], 6);
 ?>
-<style>@media screen and (max-width:767.9px){.masonry[data-columns]::before{content:'1 .col-xs-12'}}@media screen and (min-width:768px) and (max-width:991.9px){.masonry[data-columns]::before{content:'1 .col-xs-6'}}@media screen and (min-width:992px) and (max-width:1199.9px){.masonry[data-columns]::before{content:'2 .col-xs-6'}}@media screen and (min-width:1200px){.masonry[data-columns]::before{content:'2 .col-xs-6'}}</style>
-<a class="fa fa-chevron-up" aria-hidden="true" id="up" title="Вгору"></a>
 <div id="myContainer">
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-<div class="carousel-inner" role="listbox">
-<div class="item active">
-<img class="first-slide" src="<?=$article["cover_image"]; ?>" alt="<?=$article["header"]; ?>">
-<div class="container-fluid">
+<div class="img-wrapper">
+<img src="<?=$article["cover_image"]; ?>" alt="<?=$article["header"]; ?>">
+<p class="header"><?=$article["header"]; ?></p>
 <p class="views"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;<?=$article["views"]; ?></p>
-<p class="date"><?=$article["date"]; ?></p>
-<div class="carousel-caption">
-<p><a><?=$article["header"]; ?></a></p>
-</div>
-</div>
-</div>
-</div>
+<p class="date"><?=date("d.m.Y", strtotime($article["date_time"])); ?></p>
 </div>
 <div class="full-content">
 <?=$article["full_content"]; ?>
 </div>
+<?php if (isset($article['source'])): ?>
 <p><a target="_blank" href="<?=$article['source']; ?>">Джерело</a></p>
+<?php endif; ?>
 <div class="fix-full-content">
 <p>Побачили помилку? Допоможіть нам її&nbsp;<span>Виправити</span></p>
 <div class="row">
@@ -65,21 +60,20 @@ $news = $tapinambur->getReadMoreNews($article["id"], $article["key_word"]);
 <span class='st_twitter_large' displayText='Tweet'></span>
 <span class='st_googleplus_large' displayText='Google +'></span>
 <span class='st_linkedin_large' displayText='LinkedIn'></span>
-<span class='st_odnoklassniki_large' displayText='Odnoklassniki'></span>
 <span class='st_pinterest_large' displayText='Pinterest'></span>
 <span class='st_flipboard_large' displayText='Flipboard'></span>
 <span class='st_email_large' displayText='Email'></span>
 <div class="row">
 <div class="col-md-6 col-xs-12">
-<?php if ($header=$tapinambur->getPrevNews($article["publish_date_time"])): ?>
-<a class="direction" href="/article/<?=translit($header[1]); ?>/<?=$header[0]; ?>">
+<?php if ($header=$tapinambur->getPrevNews($article["date_time"])): ?>
+<a class="direction" href="/article/<?=translit($header[1]); ?>/<?=$header[0]; ?>/">
 <i class="fa fa-angle-double-left" aria-hidden="true"></i>&nbsp;<?=$header[1]; ?>
 </a>
 <?php endif; ?>
 </div>
 <div class="col-md-6 col-xs-12">
-<?php if ($header=$tapinambur->getNextNews($article["publish_date_time"])): ?>
-<a class="direction" href="/article/<?=translit($header[1]); ?>/<?=$header[0]; ?>">
+<?php if ($header=$tapinambur->getNextNews($article["date_time"])): ?>
+<a class="direction" href="/article/<?=translit($header[1]); ?>/<?=$header[0]; ?>/">
 <?=$header[1]; ?>&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i>
 </a>
 <?php endif; ?>
@@ -90,11 +84,11 @@ $news = $tapinambur->getReadMoreNews($article["id"], $article["key_word"]);
 <?php foreach ($news as $item): ?>
 <div>
 <div class="image">
-<a href="/article/<?=translit($item['header']); ?>/<?=$item['id']; ?>"><img src="<?=$item['cover_image']; ?>"></a>
+<a href="/article/<?=translit($item['header']); ?>/<?=$item['id']; ?>/"><img src="<?=$item['cover_image']; ?>"></a>
 <p class="date"><?=$item['date']; ?></p>
 <p class="views"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;<?=$item['views']; ?></p>
 </div>
-<h2><a href="/article/<?=translit($item['header']); ?>/<?=$item['id']; ?>"><?=$item['header']; ?></a></h2>
+<h2><a href="/article/<?=translit($item['header']); ?>/<?=$item['id']; ?>/"><?=$item['header']; ?></a></h2>
 <p><?=$item['content']; ?></p>
 </div>
 <?php endforeach; ?>

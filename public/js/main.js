@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	window.onscroll = function() {
-    var scrolled = window.pageYOffset;
+    let scrolled = window.pageYOffset;
     
     if (scrolled > 200) {
       $("header, header .dropdown-menu").css("background-color", "rgba(255, 250, 250, 0.8)");
@@ -18,7 +18,7 @@ $(document).ready(function() {
   $("#up").click(function() {
     var scroll = window.pageYOffset;
 
-    var timerId = setInterval(function() {
+    let timerId = setInterval(function() {
       $(document).scrollTop(scroll);
       scroll -= 90; 
 
@@ -31,23 +31,23 @@ $(document).ready(function() {
 
   $(".fix-full-content span").click(function() {
     $(".fix-full-content p, .full-content + p").hide("slow");
-    $(".fix-full-content button[name='save'], .fix-full-content button[name='cancel']").show("slow");
+    $(".fix-full-content button[name='save'], .fix-full-content button[name='cancel']").show();
     $(".full-content").css("background-color", "#FFEC8B");
     $(".full-content").attr("contenteditable", "true");
 
-    var FULL_CONTENT = $(".full-content").html();
+    let FULL_CONTENT = $(".full-content").html();
 
     $(".fix-full-content button[name='cancel']").click(function() {
       $(".full-content").html(FULL_CONTENT);
       $(".full-content").attr("contenteditable", "false");
       $(".full-content").css("background-color", "#fff");
-      $(".fix-full-content button[name='save'], .fix-full-content button[name='cancel']").hide("slow");
+      $(".fix-full-content button[name='save'], .fix-full-content button[name='cancel']").hide();
       $(".fix-full-content p, .full-content + p").show("slow");
     });
 
     $(".fix-full-content button[name='save']").click(function() {   
-      var id = $(this).attr("data-id");
-      var fullContent = $(".full-content").html();
+      let id = $(this).attr("data-id");
+      let fullContent = $(".full-content").html();
 
       $.ajax({
         url: '/public/php/update-article.php',
@@ -140,11 +140,9 @@ function translit(insert) {
     'ь':'’',
     'ю':'iu',
     'я':'ya',
-    
     ' ':'-',
     ' - ':'-',
     '_':'-',
-    
     '.':'',
     ':':'',
     ';':'',

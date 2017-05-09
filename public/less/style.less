@@ -1,4 +1,4 @@
-html, body {
+body {
 overflow-x: hidden;
 background-color: #EEEEEE;
 }
@@ -70,6 +70,7 @@ padding: 5px 10px;
 }
 }
 .video-wrapper {
+margin: 10px 0;
 position: relative;
 padding-bottom: 56.25%;
 padding-top: 25px;
@@ -83,18 +84,38 @@ height: 100%;
 }
 }
 .img-wrapper {
-margin: 10px 0;
-position: relative;
-padding-bottom: 56.25%;
-padding-top: 25px;
-height: 0;
-img {
-position: absolute;
-top: 0;
-left: 0;
 width: 100%;
-height: 100%;
+margin: 10px 0;
+overflow: hidden;
+position: relative;
+img {
+width: 100%;
 }
+.header, .views, .date {
+color: #fff;
+text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+.header {
+position: absolute;
+left: 6%;
+right: 6%;
+bottom: 35px;
+text-align: center;
+}
+.date {
+position: absolute;
+bottom: 0;
+right: 18px;
+}
+.views {
+position: absolute;
+bottom: 0;
+left: 18px;
+}
+}
+input, textarea {
+margin: 5px 0;
+padding: 0 10px !important;
 }
 /* Extra small devices (phones, less than 768px) */
 @media screen and (max-width: 767.9px) {
@@ -130,6 +151,11 @@ font-size: 22px;
 }
 h3, table, p, input, textarea, .btn, .form-control, ul, ol {
 font-size: 18px;
+}
+.img-wrapper {
+.header {
+font-size: 22px;
+}
 }
 }
 /* Small devices (tablets, 768px and up) */
@@ -173,6 +199,11 @@ font-size: 20px;
 table, p, input, textarea, .btn, .form-control, ul, ol {
 font-size: 18px;
 }
+.img-wrapper {
+.header {
+font-size: 24px;
+}
+}
 }
 /* Medium devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) and (max-width: 1199.9px) {
@@ -215,6 +246,11 @@ font-size: 22px;
 table, p, input, textarea, .btn, .form-control, ul, ol {
 font-size: 20px;
 }
+.img-wrapper {
+.header {
+font-size: 28px;
+}
+}
 }
 /* Large devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
@@ -244,5 +280,10 @@ font-size: 26px;
 }
 table, p, input, textarea, .btn, .form-control, ul, ol {
 font-size: 22px;
+}
+.img-wrapper {
+.header {
+font-size: 30px;
+}
 }
 }
