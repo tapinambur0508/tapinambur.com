@@ -1,8 +1,8 @@
 <?php 
 include_once($_SERVER['DOCUMENT_ROOT'].'/app/include/function.php'); 
-$tapinambur = new tapinambur(); 
+$tapinambur=new tapinambur(); 
 $article=$tapinambur->getArticle($_GET["id"]);
-if (!$article) { exit(header("Location: /404")); }
+if ($article) { 
 $title = $article["header"].' | tapinambur';
 $style_less = 'article-style.less';
 $style_masonry = 'masonry-small.css';
@@ -27,6 +27,7 @@ $ip = $_SERVER["REMOTE_ADDR"];
 $browser = $_SERVER['HTTP_USER_AGENT'];
 $article["views"] = $tapinambur->setVisits($_GET["id"], $article["views"], $ip, $browser);
 $news = $tapinambur->getRandNews($article["id"], 6);
+} else { exit(header("Location: /404")); }
 ?>
 <div id="myContainer">
 <div class="img-wrapper">

@@ -4,7 +4,7 @@
 		$tapinambur = new tapinambur();
 
 		if ($_POST["href"]) {
-			echo(json_encode($tapinambur->getPublication($_POST['href'], $_POST["pos"], $_POST["count"])));
+			echo(json_encode($tapinambur->getPublication($_POST["href"], $_POST["pos"], $_POST["count"])));
 		} else {
 			echo(json_encode($tapinambur->getNews($_POST["pos"], $_POST["count"])));	
 		}	

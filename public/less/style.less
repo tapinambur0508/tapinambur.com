@@ -26,11 +26,7 @@ font-style: oblique;
 ul.navbar-nav {
 li a {
 color: #000;
-border: none;
 font-style: italic;
-}
-li:hover a {
-border: none;
 }
 }
 }
@@ -43,13 +39,11 @@ font-style: oblique;
 ul.navbar-nav {
 li a {
 color: #FFF;
-border: none;
 font-style: italic;
-}
-li a:hover {
-border: none;
+&:hover {
 color: #FFA500;
 background-color: rgba(0, 0, 0, 0);
+}
 }
 }
 }
@@ -91,9 +85,11 @@ position: relative;
 img {
 width: 100%;
 }
-.header, .views, .date {
+.header, 
+.views, 
+.date {
 color: #fff;
-text-shadow: 0 1px 2px rgba(0,0,0,.6);
+text-shadow: 0 1px 2px rgba(0,0,0,0.6);
 }
 .header {
 position: absolute;
@@ -113,7 +109,8 @@ bottom: 0;
 left: 18px;
 }
 }
-input, textarea {
+input, 
+textarea {
 margin: 5px 0;
 padding: 0 10px !important;
 }
@@ -122,11 +119,6 @@ padding: 0 10px !important;
 header {
 .navbar-brand {
 font-size: 24px;
-}
-ul.navbar-nav  {
-li {
-font-size: 16px;
-}
 }
 }
 footer {
@@ -149,7 +141,7 @@ font-size: 26px;
 h2 {
 font-size: 22px;
 }
-h3, table, p, input, textarea, .btn, .form-control, ul, ol {
+h3, table, p, input, textarea, ul, ol, .btn, .form-control {
 font-size: 18px;
 }
 .img-wrapper {
@@ -163,11 +155,6 @@ font-size: 22px;
 header {
 .navbar-brand {
 font-size: 24px;
-}
-ul.navbar-nav  {
-li {
-font-size: 16px;
-}
 }
 }
 footer {
@@ -183,7 +170,6 @@ display: flex;
 justify-content: center;
 li {
 font-size: 22px;
-text-align: center;
 }
 }
 }
@@ -196,7 +182,7 @@ font-size: 26px;
 h3 {
 font-size: 20px;
 }
-table, p, input, textarea, .btn, .form-control, ul, ol {
+table, p, input, textarea, ul, ol, .btn, .form-control {
 font-size: 18px;
 }
 .img-wrapper {
@@ -210,11 +196,6 @@ font-size: 24px;
 header {
 .navbar-brand {
 font-size: 26px;
-}
-ul.navbar-nav {
-li {
-font-size: 18px;
-}
 }
 }
 footer {
@@ -230,7 +211,6 @@ display: flex;
 justify-content: center;
 li {
 font-size: 24px;
-text-align: center;
 }
 }
 }
@@ -243,7 +223,7 @@ font-size: 28px;
 h3 {
 font-size: 22px;
 }
-table, p, input, textarea, .btn, .form-control, ul, ol {
+table, p, input, textarea, ul, ol, .btn, .form-control {
 font-size: 20px;
 }
 .img-wrapper {
@@ -257,11 +237,6 @@ font-size: 28px;
 header {
 .navbar-brand {
 font-size: 28px;
-}
-ul.navbar-nav {
-li {
-font-size: 20px;
-}
 }
 }
 footer {
@@ -278,7 +253,7 @@ font-size: 26px;
 }
 }
 }
-table, p, input, textarea, .btn, .form-control, ul, ol {
+table, p, input, textarea, ul, ol, .btn, .form-control {
 font-size: 22px;
 }
 .img-wrapper {

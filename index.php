@@ -1,6 +1,6 @@
 <?php 
 include_once($_SERVER['DOCUMENT_ROOT'].'/app/include/function.php');
-$tapinambur = new tapinambur();
+$tapinambur=new tapinambur();
 $first_article=$tapinambur->getArticle(2747);
 $second_article = $tapinambur->getArticle(17264);
 $third_article = $tapinambur->getArticle(12685);
@@ -74,7 +74,7 @@ include_once($_SERVER['DOCUMENT_ROOT'].'/app/header.php');
 </div>
 <?php endforeach; ?>
 </div>
-<a href="/news" class="btn btn-info btn-block">Читати усі новини&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+<a href="/news/" class="btn btn-info btn-block">Читати усі новини&nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 <h1>Найбільш популярні:</h1>
 <div class="row masonry" data-columns>
 <?php $news=$tapinambur->getMostVisitNews(0, 9); foreach($news as $item): ?>

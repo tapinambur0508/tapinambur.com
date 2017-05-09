@@ -1,6 +1,6 @@
 <?php 
 include_once($_SERVER['DOCUMENT_ROOT'].'/app/include/function.php');
-$tapinambur = new tapinambur();
+$tapinambur=new tapinambur();
 $title='Історія версій | tapinambur'; 
 $style_less='system-style.less'; 
 include_once($_SERVER['DOCUMENT_ROOT'].'/app/header.php'); 
