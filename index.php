@@ -9,7 +9,6 @@ $style_less = 'home-style.less';
 $style_masonry = 'masonry-big.css'; 
 include_once($_SERVER['DOCUMENT_ROOT'].'/app/header.php'); 
 ?>
-<a class="fa fa-chevron-up" aria-hidden="true" id="up" title="Вгору"></a>
 <div id="myContainer">
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner" role="listbox">
