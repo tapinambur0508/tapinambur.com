@@ -22,7 +22,6 @@ $style_less = 'news-style.less';
 $style_masonry = 'masonry-big.css';
 include_once($_SERVER['DOCUMENT_ROOT'].'/app/header.php');
 ?>
-<a class="fa fa-chevron-up" aria-hidden="true" id="up" title="Вгору"></a>
 <div id="myContainer">
 <h1><?=$heading; ?></h1>
 <div class="row masonry" data-columns>
