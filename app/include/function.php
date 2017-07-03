@@ -77,12 +77,6 @@
             return $value;
         }
 
-        function needToUpdateArticle($article_id, $full_content) {
-            $this->mysqli->query("INSERT INTO `need_to_update_articles` SET `full_content` = '$full_content', `article_id` = $article_id");
-
-            return mysqli_insert_id($this->mysqli);
-        }
-
         function getPrevNews($date_time) {
             return mysqli_fetch_row($this->mysqli->query("SELECT `id`, `header` FROM `news` WHERE `date_time` < '$date_time' AND `publish` = 1 ORDER BY `date_time` DESC"));
         }

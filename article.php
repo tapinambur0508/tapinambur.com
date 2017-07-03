@@ -1,17 +1,16 @@
-<?php 
-include_once($_SERVER['DOCUMENT_ROOT'].'/app/include/function.php'); 
-$tapinambur=new tapinambur(); 
+<?php
+include_once($_SERVER['DOCUMENT_ROOT'].'/app/include/function.php');
+$tapinambur=new tapinambur();
 $article=$tapinambur->getArticle($_GET["id"]);
-if ($article) { 
+if ($article) {
 $title = $article["header"].' | tapinambur';
 $style_less = 'article-style.less';
 $style_masonry = 'masonry-small.css';
 $meta = '
+<meta property="og:url" content="'.$_SERVER["HTTP_HOST"].''.$_SERVER["REQUEST_URI"].'"/>
 <meta property="og:title" content="'.$title.'" />
-<meta property="og:type" content="article" />
 <meta property="og:description" content="'.$article["header"].'"/>
 <meta property="og:image" content="'.$article["cover_image"].'"/>
-<meta property="og:url" content="'.$_SERVER["HTTP_HOST"].''.$_SERVER["REQUEST_URI"].'"/>
 <meta property="og:site_name" content="tapinambur"/>
 <meta property="fb:app_id" content="1276593922383445"/>
 <meta property="fb:admins" content="100002982444589"/>
@@ -31,39 +30,26 @@ $news = $tapinambur->getRandNews($article["id"], 6);
 ?>
 <div id="myContainer">
 <div class="img-wrapper">
-<img src="<?=$article["cover_image"]; ?>" alt="<?=$article["header"]; ?>">
+<img src="<?=$article["cover_image"]; ?>" alt="<?=$article["header"]; ?>" style="width: 100%">
 <p class="header"><?=$article["header"]; ?></p>
 <p class="views"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp;<?=$article["views"]; ?></p>
 <p class="date"><?=date("d.m.Y", strtotime($article["date_time"])); ?></p>
 </div>
-<div class="full-content">
 <?=$article["full_content"]; ?>
-</div>
 <?php if (isset($article['source'])): ?>
 <p><a target="_blank" href="<?=$article['source']; ?>">Джерело</a></p>
 <?php endif; ?>
-<div class="fix-full-content">
-<p>Побачили помилку? Допоможіть нам її&nbsp;<span>Виправити</span></p>
-<div class="row">
-<div class="col-md-6 col-xs-12">
-<button class="btn btn-success btn-block" name="save" data-id="<?=$article['id']; ?>">Зберегти</button>
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_twitter"></a>
+<a class="a2a_button_google_plus"></a>
+<a class="a2a_button_linkedin"></a>
+<a class="a2a_button_email"></a>
 </div>
-<div class="col-md-6 col-xs-12">
-<button class="btn btn-danger btn-block" name="cancel">Скасувати</button>
-</div>
-</div>
-</div>
-<script type="text/javascript">var switchTo5x=true;</script>
-<script type="text/javascript" id="st_insights_js" src="http://w.sharethis.com/button/buttons.js?publisher=8c694d50-97fa-4f3d-8dab-6710d08c8e89"></script>
-<script type="text/javascript">stLight.options({publisher:"8c694d50-97fa-4f3d-8dab-6710d08c8e89",doNotHash:false,doNotCopy:false,hashAddressBar:false});</script>
-<span class='st_facebook_large' displayText='Facebook'></span>
-<span class='st_vkontakte_large' displayText='Vkontakte'></span>
-<span class='st_twitter_large' displayText='Tweet'></span>
-<span class='st_googleplus_large' displayText='Google +'></span>
-<span class='st_linkedin_large' displayText='LinkedIn'></span>
-<span class='st_pinterest_large' displayText='Pinterest'></span>
-<span class='st_flipboard_large' displayText='Flipboard'></span>
-<span class='st_email_large' displayText='Email'></span>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
 <div class="row">
 <div class="col-md-6 col-xs-12">
 <?php if ($header=$tapinambur->getPrevNews($article["date_time"])): ?>

@@ -7,7 +7,6 @@
 <li><a href="/cooperation/">Співробітництво</a></li>
 <li><a href="/about-us/">Про нас</a></li>
 <li><a target="_blank" href="https://fb.me/tapinamburOfficial/" class="fa fa-facebook-official" aria-hidden="true"></a></li>
-<li><a target="_blank" href="https://vk.com/tapinambur_official/" class="fa fa-vk" aria-hidden="true"></a></li>
 <li><a target="_blank" href="https://twitter.com/TAPINAMBURG/" class="fa fa-twitter" aria-hidden="true"></a></li>
 <li><a target="_blank" href="https://plus.google.com/communities/101877160060112499106/" class="fa fa-google-plus" aria-hidden="true"></a></li>
 </ul>

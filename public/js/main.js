@@ -1,22 +1,16 @@
 $(document).ready(function() {
-	window.onscroll = function() {
+	$(window).scroll(function() {
     let scrolled = window.pageYOffset;
     
-    if (scrolled > 200) {
-      $("header, header .dropdown-menu").css("background-color", "rgba(255, 250, 250, 0.8)");
-    } else {
-      $("header, header .dropdown-menu").css("background-color", "rgba(255, 250, 250, 1)");
-    }
+    if (scrolled > 200) { $("header, header .dropdown-menu").css("background-color", "rgba(255, 250, 250, 0.8)"); } 
+    else { $("header, header .dropdown-menu").css("background-color", "rgba(255, 250, 250, 1)"); }
 
-    if (scrolled > 600) {
-       $("#up").show();
-    } else {
-      $("#up").hide();
-    }
-  }
+    if (scrolled > 600) { $("#up").show(); } 
+    else { $("#up").hide(); }
+  });
 
   $("#up").click(function() {
-    var scroll = window.pageYOffset;
+    let scroll = window.pageYOffset;
 
     let timerId = setInterval(function() {
       $(document).scrollTop(scroll);
@@ -27,49 +21,6 @@ $(document).ready(function() {
         window.scrollTo(0, 0);
       }
     }, 10);
-  });
-
-  $(".fix-full-content span").click(function() {
-    $(".fix-full-content p, .full-content + p").hide("slow");
-    $(".fix-full-content button[name='save'], .fix-full-content button[name='cancel']").show();
-    $(".full-content").css("background-color", "#FFEC8B");
-    $(".full-content").attr("contenteditable", "true");
-
-    let FULL_CONTENT = $(".full-content").html();
-
-    $(".fix-full-content button[name='cancel']").click(function() {
-      $(".full-content").html(FULL_CONTENT);
-      $(".full-content").attr("contenteditable", "false");
-      $(".full-content").css("background-color", "#fff");
-      $(".fix-full-content button[name='save'], .fix-full-content button[name='cancel']").hide();
-      $(".fix-full-content p, .full-content + p").show("slow");
-    });
-
-    $(".fix-full-content button[name='save']").click(function() {   
-      let id = $(this).attr("data-id");
-      let fullContent = $(".full-content").html();
-
-      $.ajax({
-        url: '/public/php/update-article.php',
-        type: "POST",
-        data: {id, full_content : fullContent},
-        success: function(data) {
-          try {
-            data = parseInt(data);
-
-            if (data > 0) {
-              alert("Дякуємо ==))");
-              $(".full-content").attr("contenteditable", "false");
-              $(".full-content").css("background-color", "#fff");
-              $(".fix-full-content button[name='save'], .fix-full-content button[name='cancel']").hide("slow");
-              $(".fix-full-content p, .full-content + p").show("slow");
-            }
-          } catch (error) {
-            console.log(error);
-          }
-        }
-      });
-    }); 
   });
 });
 

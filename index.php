@@ -4,7 +4,7 @@ $tapinambur=new tapinambur();
 $first_article=$tapinambur->getArticle(2747);
 $second_article = $tapinambur->getArticle(17264);
 $third_article = $tapinambur->getArticle(12685);
-$title='tapinambur | Новини зі світу технологій, автомобілів, спорту та багато іншого'; 
+$title='tapinambur | Новини зі світу технологій, автомобілів та багато іншого'; 
 $style_less = 'home-style.less'; 
 $style_masonry = 'masonry-big.css'; 
 include_once($_SERVER['DOCUMENT_ROOT'].'/app/header.php'); 
